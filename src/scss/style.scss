@@ -1,0 +1,29 @@
+@import "variables";
+@import "fonts";
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input, button, select{
+  outline: none;
+  border: none;
+}
+
+.btn-success{
+  background: $green-color;
+}
+
+.btn-secondary{
+  background: $gray-color;
+}
+body{
+  //font-family: "Open Sans Regular", sans-serif;
+  //font-family: "Open Sans SemiBold", sans-serif;
+  //font-family: "Open Sans Bold", sans-serif;
+  //font-family: "Roboto Regular", sans-serif;
+}

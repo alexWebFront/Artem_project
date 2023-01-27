@@ -1,30 +1,63 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="page">
+    <div class="page__container">
+      <v-header/>
+      <div class="page__content">
+        <user-list v-bind:userList="userList"/>
+      </div>
+      <v-filter/>
+    </div>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import UserList from "@/components/UserList";
+import VHeader from "@/components/VHeader";
+import VFilter from "@/components/VFilter";
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  components: {VFilter, VHeader, UserList},
+  data() {
+    return {
+      userList: [
+        {
+          id: 1,
+          name: "Зубенко Михаил Петрович",
+          company: "ООО “АСОЛЬ”",
+          group: "Жеромин",
+          status: "",
+        },
+        {
+          id: 2,
+          name: "Зубенко Михаил Петрович",
+          company: "ООО “АСОЛЬ”",
+          group: "Жеромин",
+          status: "",
+        },
+        {
+          id: 3,
+          name: "Зубенко Михаил Петрович",
+          company: "ООО “АСОЛЬ”",
+          group: "Жеромин",
+          status: "",
+        },
+      ]
     }
+  },
+  methods: {}
+}
+</script>
+
+<style lang="scss" scoped>
+
+.page {
+  font-family: "Open Sans Regular", sans-serif;
+
+  &__container {
+    max-width: 1920px;
+    height: 100vh;
+    padding: 30px 60px;
+    position: relative;
   }
 }
 </style>
